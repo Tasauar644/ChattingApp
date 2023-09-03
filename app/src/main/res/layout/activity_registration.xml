@@ -8,7 +8,7 @@
     tools:context=".registration">
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/rgPassword2"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_52sdp"
         android:ems="10"
@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.363" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profilerg"
+        android:id="@+id/profileImage"
         android:layout_width="151dp"
         android:layout_height="130dp"
         android:src="@drawable/photocamera"
@@ -137,7 +137,7 @@
         app:layout_constraintVertical_bias="0.801" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/rgEmail"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_52sdp"
         android:ems="10"
@@ -153,7 +153,7 @@
         app:layout_constraintVertical_bias="0.585" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/rgPassword"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_52sdp"
         android:ems="10"
@@ -170,10 +170,10 @@
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/signUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sigb up"
+        android:text="Sign up"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,7 +183,7 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/logInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log In"
@@ -196,7 +196,7 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/rgName"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_52sdp"
         android:ems="10"

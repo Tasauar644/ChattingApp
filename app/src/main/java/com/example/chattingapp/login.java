@@ -21,7 +21,7 @@ public class login extends AppCompatActivity {
 
     Button button;
     EditText email,password;
-    String emailPattern="^[A-Za-z0-9+_. -]+@(. +)$";
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     FirebaseAuth auth;
 
    // @SuppressLint("WrongViewCast")
@@ -74,7 +74,7 @@ public class login extends AppCompatActivity {
 
                        }
                    });
-               } 
+               }
            }
        });
 
