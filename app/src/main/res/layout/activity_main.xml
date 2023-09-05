@@ -1,18 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mainback"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Chatting App"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Shifted ImageView to the right of the TextView -->
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/logout"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_140sdp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainUserRecyclerView"
+        android:layout_width="381dp"
+        android:layout_height="397dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="97dp" />
+
+    <ImageView
+        android:id="@+id/cameraImageView"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-35dp"
+        android:layout_marginTop="597dp"
+        android:layout_marginEnd="137dp"
+        android:src="@drawable/camera" />
+
+    <ImageView
+        android:id="@+id/chatImageView"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="602dp"
+        android:layout_marginEnd="42dp"
+        android:src="@drawable/chat" />
+
+    <ImageView
+        android:id="@+id/settingImageView"
+        android:layout_width="231dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="603dp"
+        android:src="@drawable/sett" />
+
+
+</RelativeLayout>

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -38,11 +39,16 @@ public class registration extends AppCompatActivity {
 
     FirebaseDatabase database;
     FirebaseStorage storage;
+    android.app.ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("Please Wait...");
+        progressDialog.setCancelable(false);
 
 
         rg_signUp=findViewById(R.id.signUpButton);
@@ -89,6 +95,7 @@ public class registration extends AppCompatActivity {
 
                 }
                 else {
+                    progressDialog.show();
                     auth.createUserWithEmailAndPassword(emaill,passwordd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -113,7 +120,7 @@ public class registration extends AppCompatActivity {
                                                             public void onComplete(@NonNull Task<Void> task) {
 
                                                                 if (task.isSuccessful()){
-                                                                    Intent intent= new Intent(registration.this,MainActivity.class);
+                                                                    Intent intent= new Intent(registration.this,login.class);
                                                                     startActivity(intent);
                                                                     finish();
                                                                 }

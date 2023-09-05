@@ -8,7 +8,7 @@
     tools:context=".splash">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewLogo"
         android:layout_width="@dimen/_160sdp"
         android:layout_height="@dimen/_84sdp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/av" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/WelcometextView"
         android:layout_width="370dp"
         android:layout_height="99dp"
         android:gravity="center"

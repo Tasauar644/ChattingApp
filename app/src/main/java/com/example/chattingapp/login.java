@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,8 +23,10 @@ public class login extends AppCompatActivity {
 
     Button button;
     EditText email,password;
+    TextView signButton;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     FirebaseAuth auth;
+    android.app.ProgressDialog progressDialog;
 
    // @SuppressLint("WrongViewCast")
     @Override
@@ -30,10 +34,25 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("Please Wait...");
+        progressDialog.setCancelable(false);
+
        auth= FirebaseAuth.getInstance();
        button=findViewById(R.id.logButton);
        email=findViewById(R.id.editTextLogEmailAddress);
        password=findViewById(R.id.editTextLogPassword);
+        signButton=findViewById(R.id.signButton);
+
+
+        signButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(login.this,registration.class);
+                startActivity(intent);
+
+            }
+        });
 
 
        button.setOnClickListener(new View.OnClickListener() {
